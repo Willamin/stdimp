@@ -9,7 +9,7 @@ class String
   #   .reverse
   #   .puts
   # ```
-  def puts
-    puts(self)
+  def puts(io : IO = STDOUT)
+    io.puts(self)
   end
 end
