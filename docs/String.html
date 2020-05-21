@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.1">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
-
-<link href="css/style.css" rel="stylesheet" type="text/css">
-
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/Willamin/stdimp">
   <title>String - github.com/Willamin/stdimp</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -35,6 +39,21 @@
 
   <div class="types-list">
     <ul>
+  
+  <li class=" " data-id="github.com/Willamin/stdimp/Array" data-name="array(t)">
+      <a href="Array.html">Array</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Willamin/stdimp/Bool" data-name="bool">
+      <a href="Bool.html">Bool</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/Willamin/stdimp/Nil" data-name="nil">
+      <a href="Nil.html">Nil</a>
+      
+    </li>
   
   <li class=" " data-id="github.com/Willamin/stdimp/Object" data-name="object">
       <a href="Object.html">Object</a>
@@ -65,7 +84,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   
 
@@ -73,11 +99,18 @@
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type">Comparable(self)</li>
-  
+    
+      <li class="other-type">Comparable(<a href="String.html">String</a>)</li>
+    
   </ul>
 
 
@@ -89,10 +122,38 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/Willamin/stdimp/blob/96964ef38b829f7d1dafa53e27f5613e143df931/src/string/puts.cr#L2" target="_blank">
+      <a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/append.cr#L1" target="_blank">
+        string/append.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/formatted.cr#L1" target="_blank">
+        string/formatted.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/prepend.cr#L1" target="_blank">
+        string/prepend.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/puts.cr#L2" target="_blank">
         string/puts.cr
       </a>
     
@@ -107,11 +168,33 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#puts-instance-method" class="signature"><strong>#puts</strong></a>
+        <a href="#append(other:String):String-instance-method" class="signature"><strong>#append</strong>(other : String) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#formatted(format:String):String-instance-method" class="signature"><strong>#formatted</strong>(format : String) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prepend(other:String):String-instance-method" class="signature"><strong>#prepend</strong>(other : String) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#puts(io:IO=STDOUT)-instance-method" class="signature"><strong>#puts</strong>(io : IO = <span class="t">STDOUT</span>)</a>
         
           <div class="summary"><p>Puts itself</p></div>
         
@@ -150,8 +233,13 @@
   <h3>Instance methods inherited from class <code><a href="Object.html">Object</a></code></h3>
   
   
-    <a href="Object.html#selftap%28%26block%29-instance-method" class="tooltip">
-      <span>selftap(&block)</span>
+    <a href="Object.html#pipe(&)-instance-method" class="tooltip">
+      <span>pipe(&)</span>
+    pipe</a>, 
+    
+  
+    <a href="Object.html#selftap(&)-instance-method" class="tooltip">
+      <span>selftap(&)</span>
     selftap</a>
     
   
@@ -171,29 +259,87 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
-    <div class="entry-detail" id="puts-instance-method">
+    <div class="entry-detail" id="append(other:String):String-instance-method">
       <div class="signature">
         
-        def <strong>puts</strong>
+        def <strong>append</strong>(other : <a href="String.html">String</a>) : <a href="String.html">String</a>
 
-        <a class="method-permalink" href="#puts-instance-method">#</a>
+        <a class="method-permalink" href="#append(other:String):String-instance-method">#</a>
       </div>
-      
-        <div class="doc"><p>Puts itself</p>
-
-<p>Often I find myself creating a pipeline of tranformations via method chaining, when I'll end up wanting to <code><a href="String.html#puts-instance-method">#puts</a></code> the end result.</p>
-
-<pre><code class="language-crystal"><span class="s">&quot;hello&quot;</span>
-  .upcase
-  .reverse
-  .puts</code></pre></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/Willamin/stdimp/blob/96964ef38b829f7d1dafa53e27f5613e143df931/src/string/puts.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/append.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="formatted(format:String):String-instance-method">
+      <div class="signature">
+        
+        def <strong>formatted</strong>(format : <a href="String.html">String</a>) : <a href="String.html">String</a>
+
+        <a class="method-permalink" href="#formatted(format:String):String-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/formatted.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prepend(other:String):String-instance-method">
+      <div class="signature">
+        
+        def <strong>prepend</strong>(other : <a href="String.html">String</a>) : <a href="String.html">String</a>
+
+        <a class="method-permalink" href="#prepend(other:String):String-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/prepend.cr#L2" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="puts(io:IO=STDOUT)-instance-method">
+      <div class="signature">
+        
+        def <strong>puts</strong>(io : IO = <span class="t">STDOUT</span>)
+
+        <a class="method-permalink" href="#puts(io:IO=STDOUT)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Puts itself</p>
+
+<p>Often I find myself creating a pipeline of tranformations via method chaining, when I'll end up wanting to <code><a href="String.html#puts(io:IO=STDOUT)-instance-method">#puts</a></code> the end result.</p>
+
+<pre><code class="language-crystal"><span class="s">&quot;hello&quot;</span>
+  .upcase
+  .reverse
+  .puts</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/string/puts.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>

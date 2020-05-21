@@ -235,7 +235,7 @@ body {
 }
 
 .entry-const {
-  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
 }
 
 .entry-const code {
@@ -257,7 +257,7 @@ body {
   border: 1px solid #f0f0f0;
   text-decoration: none;
   border-radius: 3px;
-  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
   transition: background .15s, border-color .15s;
 }
 
@@ -293,7 +293,7 @@ body {
   background-color: #f8f8f8;
   color: #47266E;
   border: 1px solid #f0f0f0;
-  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
   transition: .2s ease-in-out;
 }
 
@@ -366,7 +366,7 @@ pre {
 }
 
 code {
-  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
 }
 
 :not(pre) > code {
@@ -553,14 +553,8 @@ span.flag.purple {
 .js-modal-visible .modal-background {
   display: flex;
 }
-.types-list,
 .main-content {
-  filter: blur(0);
-  transition: filter 200ms;
-}
-.js-modal-visible .types-list,
-.js-modal-visible .main-content {
-  filter: blur(2px);
+  position: relative;
 }
 .modal-background {
   position: absolute;
@@ -632,4 +626,49 @@ span.flag.purple {
   clear: left;
   margin-left: -100px;
   margin-right: 12px;
+}
+.doc-inherited {
+  font-weight: bold;
+}
+
+.anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+}
+
+.main-content .anchor .octicon-link {
+  width: 16px;
+  height: 16px;
+}
+
+.main-content .anchor:focus {
+  outline: none
+}
+
+.main-content h1:hover .anchor,
+.main-content h2:hover .anchor,
+.main-content h3:hover .anchor,
+.main-content h4:hover .anchor,
+.main-content h5:hover .anchor,
+.main-content h6:hover .anchor {
+  text-decoration: none
+}
+
+.main-content h1 .octicon-link,
+.main-content h2 .octicon-link,
+.main-content h3 .octicon-link,
+.main-content h4 .octicon-link,
+.main-content h5 .octicon-link,
+.main-content h6 .octicon-link {
+  visibility: hidden
+}
+
+.main-content h1:hover .anchor .octicon-link,
+.main-content h2:hover .anchor .octicon-link,
+.main-content h3:hover .anchor .octicon-link,
+.main-content h4:hover .anchor .octicon-link,
+.main-content h5:hover .anchor .octicon-link,
+.main-content h6:hover .anchor .octicon-link {
+  visibility: visible
 }

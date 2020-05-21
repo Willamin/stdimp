@@ -15,7 +15,7 @@
 </svg>
 
   <meta id="repository-name" content="github.com/Willamin/stdimp">
-  <title>Object - github.com/Willamin/stdimp</title>
+  <title>Bool - github.com/Willamin/stdimp</title>
   <script type="text/javascript">
     CrystalDoc.base_path = "";
   </script>
@@ -45,7 +45,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/Willamin/stdimp/Bool" data-name="bool">
+  <li class=" current" data-id="github.com/Willamin/stdimp/Bool" data-name="bool">
       <a href="Bool.html">Bool</a>
       
     </li>
@@ -55,7 +55,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/Willamin/stdimp/Object" data-name="object">
+  <li class=" " data-id="github.com/Willamin/stdimp/Object" data-name="object">
       <a href="Object.html">Object</a>
       
     </li>
@@ -74,10 +74,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">abstract class</span> Object
+  <span class="kind">struct</span> Bool
 
 </h1>
 
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="Bool.html">Bool</a></li><li class="superclass">Value</li><li class="superclass"><a href="Object.html">Object</a></li></ul>
 
 
 
@@ -91,7 +93,10 @@
     Overview
   </h2>
 
-  <p><code><a href="Object.html">Object</a></code> is the base type of all Crystal objects.</p>
+  <p>Bool has only two possible values: <code>true</code> and <code>false</code>. They are constructed using these literals:</p>
+
+<pre><code><span class="n">true</span>  <span class="c"># A Bool that is true</span>
+<span class="n">false</span> <span class="c"># A Bool that is false</span></code></pre>
 
 
 
@@ -116,15 +121,8 @@
   </h2>
   
     
-      <a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/object/pipe.cr#L1" target="_blank">
-        object/pipe.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/object/selftap.cr#L1" target="_blank">
-        object/selftap.cr
+      <a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/bool/inverted.cr#L1" target="_blank">
+        bool/inverted.cr
       </a>
     
     <br/>
@@ -149,16 +147,9 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#pipe(&)-instance-method" class="signature"><strong>#pipe</strong>(&)</a>
+        <a href="#inverted-instance-method" class="signature"><strong>#inverted</strong></a>
         
-          <div class="summary"><p>Pipes itself</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#selftap(&)-instance-method" class="signature"><strong>#selftap</strong>(&)</a>
-        
-          <div class="summary"><p>Taps into itself</p></div>
+          <div class="summary"><p>Inverts a bool</p></div>
         
       </li>
     
@@ -169,6 +160,40 @@
 
 
 <div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="Object.html">Object</a></code></h3>
+  
+  
+    <a href="Object.html#pipe(&)-instance-method" class="tooltip">
+      <span>pipe(&)</span>
+    pipe</a>, 
+    
+  
+    <a href="Object.html#selftap(&)-instance-method" class="tooltip">
+      <span>selftap(&)</span>
+    selftap</a>
+    
+  
+
+
+    
+
+
+    
+
+
   
 </div>
 
@@ -186,62 +211,31 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="pipe(&amp;)-instance-method">
+    <div class="entry-detail" id="inverted-instance-method">
       <div class="signature">
         
-        def <strong>pipe</strong>(&)
+        def <strong>inverted</strong>
 
-        <a class="method-permalink" href="#pipe(&)-instance-method">#</a>
+        <a class="method-permalink" href="#inverted-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Pipes itself</p>
+          <p>Inverts a bool</p>
 
-<p>Helpful in writing method-chain pipelines when adding a method to the isn't preferred.</p>
+<p>This provides a convenient inversion method for use in method chains.</p>
 
-<pre><code class="language-crystal"><span class="s">&quot;hello&quot;</span>
-  .pipe { <span class="o">|</span>x<span class="o">|</span> <span class="t">Base64</span>.encode(x) }
-  .pipe { <span class="o">|</span>y<span class="o">|</span> puts(y) }</code></pre>
+<pre><code class="language-crystal">is_hidden <span class="o">=</span> <span class="n">true</span>
+
+is_hidden
+  .inverted
+  .map { <span class="o">|</span>b<span class="o">|</span> b ? <span class="s">&quot;yes&quot;</span> : <span class="s">&quot;no&quot;</span> }</code></pre>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/object/pipe.cr#L11" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="selftap(&amp;)-instance-method">
-      <div class="signature">
-        
-        def <strong>selftap</strong>(&)
-
-        <a class="method-permalink" href="#selftap(&)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Taps into itself</p>
-
-<p>This is for use with APIs that are geared more towards a DSL approach, changing the default method receiver.</p>
-
-<pre><code class="language-crystal"><span class="k">class</span> <span class="t">Person</span>
-  <span class="k">def</span> <span class="m">say_hello</span>
-    puts <span class="s">&quot;hello&quot;</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-
-<span class="t">Person</span>.<span class="k">new</span>.selftap <span class="k">do</span>
-  say_hello
-<span class="k">end</span></code></pre>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/object/selftap.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/Willamin/stdimp/blob/56bc6c2b18ed0e0f12bbf280676e3970994e7392/src/bool/inverted.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
