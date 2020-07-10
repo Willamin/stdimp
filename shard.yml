@@ -8,7 +8,7 @@ targets:
   stdimp:
     main: src/stdimp.cr
 
-crystal: 0.25.1
+crystal: 0.35.1
 
 license: MIT
 

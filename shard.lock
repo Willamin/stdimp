@@ -1,6 +1,6 @@
-version: 1.0
+version: 2.0
 shards:
   microtest:
-    github: ragmaanir/microtest
-    commit: 46199a9b32be12021b9018a7e7e068572b842c69
+    git: https://github.com/ragmaanir/microtest.git
+    version: 1.2.1+git.commit.46199a9b32be12021b9018a7e7e068572b842c69
 
